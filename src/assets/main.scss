@@ -1,13 +1,4 @@
-$color_1: var(--text-faint);
-$color_2: var(--text-normal);
-$color_3: #dc3545;
-$color_4: var(--text-error);
-$background-color_1: currentColor;
-$border-color_1: #dc3545;
-$border-color_2: var(--background-modifier-border-focus);
 
-/** Constants */
-/** Settings */
 @keyframes admonition-convert {
   from {
     transform: rotateZ(-45deg);
@@ -120,7 +111,7 @@ body.admonition {
 }
 
 .admonition-content-copy {
-  color: $color_1;
+  color: var(--text-faint);
   cursor: pointer;
   opacity: 0;
   position: absolute;
@@ -130,7 +121,7 @@ body.admonition {
   transition: 0.3s opacity ease-in;
 
   &:hover {
-    color: $color_2;
+    color: var(--text-normal);
     opacity: 1;
   }
 }
@@ -167,12 +158,12 @@ body.admonition {
   }
 
   .admonition-convert {
-    color: $color_4;
+    color: var(--text-error);
   }
 
   .coffee {
     width: 60%;
-    color: $color_1;
+    color: var(--text-faint);
     margin: 1rem auto;
     text-align: center;
 
@@ -210,7 +201,7 @@ body.admonition {
         > .handle {
           transform: rotate(0deg);
           transition: transform 0.25s;
-          background-color: $background-color_1;
+          background-color: currentColor;
           -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
           -webkit-mask-size: contain;
@@ -254,7 +245,7 @@ body.admonition {
 }
 
 input.is-invalid {
-  border-color: $border-color_1 !important;
+  border-color: #dc3545 !important;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
   background-position: right calc(0.375em + 0.1875rem) center;
@@ -273,7 +264,7 @@ input.is-invalid {
   width: 100%;
   margin-top: 0.25rem;
   font-size: 0.875em;
-  color: $color_3;
+  color: #dc3545;
 }
 
 .suggestion-content.admonition-icon {
@@ -357,14 +348,14 @@ input.is-invalid {
   button {
     &:focus {
       box-shadow: 0 0 0.3125rem rgb(0 0 0 / 50%);
-      border-color: $border-color_2;
+      border-color: var(--background-modifier-border-focus);
     }
   }
 
   .clickable-icon {
     &:focus {
       box-shadow: 0 0 0.3125rem rgb(0 0 0 / 50%);
-      border-color: $border-color_2;
+      border-color: var(--background-modifier-border-focus);
     }
   }
 }
@@ -377,7 +368,7 @@ input.is-invalid {
 }
 
 .admonition-setting-warning.text-warning {
-  color: $color_4;
+  color: var(--text-error);
 }
 
 .admonitions-nested-settings {
