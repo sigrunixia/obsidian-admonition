@@ -52,11 +52,12 @@
   }
 }
 
-// Makes Mathjax blocks stop jumping around between views
+// Makes Mathjax blocks stop jumping around between views and
+// makes Mathjax act nicer in OL Blocks
 :is(.markdown-source-view.mod-cm6) .admonition .math-block > mjx-container {
   display: block;
   text-align: center;
-  padding: 0.0625rem;
+  padding: 1rem;
 }
 
 :is(.markdown-reading-view) .admonition .math-block > mjx-container {
